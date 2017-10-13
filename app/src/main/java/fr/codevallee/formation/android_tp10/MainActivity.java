@@ -2,6 +2,7 @@ package fr.codevallee.formation.android_tp10;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -94,7 +95,15 @@ public class MainActivity extends AppCompatActivity {
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(!MainActivity.this.inputEmpty()) {
+                    TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+                    String inputNumberText = inputNumber.getText().toString();
 
+                    numberStack.push(Integer.parseInt(inputNumberText));
+                    Log.d("Info", numberStack.toString());
+                    refreshNumberStack();
+                    clearInputField();
+                }
             }
         });
     }
@@ -223,5 +232,19 @@ public class MainActivity extends AppCompatActivity {
         stackNumber2.setText("");
         stackNumber3.setText("");
         stackNumber4.setText("");
+    }
+
+    private void refreshNumberStack() {
+        Integer[] last = this.numberStack.getLastFour();
+
+        TextView stackNumber1 = (TextView) findViewById(R.id.stackNumber1);
+        TextView stackNumber2 = (TextView) findViewById(R.id.stackNumber2);
+        TextView stackNumber3 = (TextView) findViewById(R.id.stackNumber3);
+        TextView stackNumber4 = (TextView) findViewById(R.id.stackNumber4);
+
+        stackNumber1.setText((last[0] == -1 ? "" : last[0].toString()));
+        stackNumber2.setText((last[1] == -1 ? "" : last[1].toString()));
+        stackNumber3.setText((last[2] == -1 ? "" : last[2].toString()));
+        stackNumber4.setText((last[3] == -1 ? "" : last[3].toString()));
     }
 }
