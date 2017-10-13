@@ -36,6 +36,18 @@ public class MainActivity extends AppCompatActivity {
         initializeOperatorButtons();
     }
 
+    private void addDigitToInput(char digit) {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        String inputNumberText = inputNumber.getText().toString();
+
+        if(inputNumberText.equals("") || inputNumberText.equals("0")) {
+            inputNumber.setText("" + digit);
+        }
+        else {
+            inputNumber.setText(inputNumberText + digit);
+        }
+    }
+
     private void initializeOperatorButtons() {
         Button plusButton = (Button) findViewById(R.id.plusButton);
         plusButton.setOnClickListener(new View.OnClickListener() {
@@ -85,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         oneButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('1');
             }
         });
 
@@ -93,7 +105,7 @@ public class MainActivity extends AppCompatActivity {
         twoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('2');
             }
         });
 
@@ -101,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         threeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('3');
             }
         });
 
@@ -109,7 +121,7 @@ public class MainActivity extends AppCompatActivity {
         fourButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('4');
             }
         });
 
@@ -117,7 +129,7 @@ public class MainActivity extends AppCompatActivity {
         fiveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('5');
             }
         });
 
@@ -125,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
         sixButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('6');
             }
         });
 
@@ -133,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
         sevenButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('7');
             }
         });
 
@@ -141,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         eightButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('8');
             }
         });
 
@@ -149,7 +161,7 @@ public class MainActivity extends AppCompatActivity {
         nineButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('9');
             }
         });
 
@@ -157,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
         zeroButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                addDigitToInput('0');
             }
         });
     }
@@ -167,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+                inputNumber.setText("");
             }
         });
 
