@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -281,6 +282,14 @@ public class MainActivity extends AppCompatActivity {
                 numberStack.push(before);
 
                 refreshNumberStack();
+            }
+        });
+
+        ImageButton eraseButton = (ImageButton) findViewById(R.id.eraseButton);
+        eraseButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clearInputField();
             }
         });
     }
