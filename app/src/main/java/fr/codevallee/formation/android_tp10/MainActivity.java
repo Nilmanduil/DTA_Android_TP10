@@ -213,7 +213,14 @@ public class MainActivity extends AppCompatActivity {
         swapButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Integer last, before;
+                last = numberStack.pop();
+                before = numberStack.pop();
 
+                numberStack.push(last);
+                numberStack.push(before);
+
+                refreshNumberStack();
             }
         });
     }
