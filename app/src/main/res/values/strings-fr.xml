@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Calculatrice Notation Polonaise Inversée</string>
+    <string name="enterLabel">Entrer</string>
+    <string name="swapLabel">Echange</string>
+    <string name="popLabel">Pop</string>
+    <string name="clearLabel">Effacer</string>
+</resources>

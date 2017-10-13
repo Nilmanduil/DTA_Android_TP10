@@ -1,0 +1,25 @@
+# Le but de ce TP 10 est de créer une application calculatrice complexe.
+# Gérer un affichage complexe en utilisant le Layout de son choix.
+# 4 heure
+
+Cette calculatrice utilise la notation polonaise inversée (https://fr.wikipedia.org/wiki/Notation_polonaise_inverse) 
+
+Ainsi, pour faire [3] [+] [4] [=], on fait faire [3] [Enter] [4] [Enter] [+]
+
+A l'affichage, nous devons avoir :
+- La pile des nombres
+- Un champ "input" permettant d'ajouter un nombre (l'ajout de ce nombre dans la pile se fait avec la touche Enter )
+- Les nombres de 0 à 9
+- Les opérations + - / *
+
+Et les touches suivantes :
+	- Clear : Efface la pile et le champ "input"
+	- Pop : Supprime le dernier élément de la pile
+	- Swap : inverse les derniers nombres de la pile
+	- Enter : pousse le nombre présent dans le champ "input" vers la pile
+
+- On n'affiche que les 4 derniers nombres de la pile des nombres
+- La pile des nombres doit être gérée par une Stack.
+- Pas d'obligation de manipuler les nombres décimaux.
+
+- L'application doit adapter son affichage dans si l'écran est en portrait ou paysage

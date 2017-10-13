@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Reverse Polish Notation calculator</string>
+    <string name="enterLabel">Enter</string>
+    <string name="swapLabel">Swap</string>
+    <string name="popLabel">Pop</string>
+    <string name="clearLabel">Clear</string>
+</resources>
