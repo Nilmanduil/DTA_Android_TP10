@@ -57,6 +57,13 @@ public class MainActivity extends AppCompatActivity {
         return inputNumberText.equals("") || inputNumberText.equals("0");
     }
 
+    private boolean inputReallyEmpty() {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        String inputNumberText = inputNumber.getText().toString();
+
+        return inputNumberText.equals("");
+    }
+
     private void beforeOperation() {
         if(inputEmpty()) {
             Integer last = numberStack.pop();
@@ -70,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                if(numberStack.size() >= 2 || (!inputReallyEmpty() && numberStack.size() >= 1)) {
                     beforeOperation();
                     Integer last = numberStack.pop();
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
@@ -89,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
         minusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                if(numberStack.size() >= 2 || (!inputReallyEmpty() && numberStack.size() >= 1)) {
                     beforeOperation();
                     Integer last = numberStack.pop();
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
@@ -108,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
         timesButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                if(numberStack.size() >= 2 || (!inputReallyEmpty() && numberStack.size() >= 1)) {
                     beforeOperation();
                     Integer last = numberStack.pop();
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
@@ -127,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
         divideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                if(numberStack.size() >= 2 || (!inputReallyEmpty() && numberStack.size() >= 1)) {
                     beforeOperation();
                     Integer last = numberStack.pop();
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
@@ -148,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!MainActivity.this.inputEmpty()) {
+                if(!MainActivity.this.inputReallyEmpty()) {
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
                     String inputNumberText = inputNumber.getText().toString();
 
