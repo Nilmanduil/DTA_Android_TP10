@@ -179,8 +179,8 @@ public class MainActivity extends AppCompatActivity {
         clearButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
-                inputNumber.setText("");
+                clearInputField();
+                clearNumberStack();
             }
         });
 
@@ -199,5 +199,22 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    private void clearInputField() {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        inputNumber.setText("");
+    }
+
+    private void clearNumberStack() {
+        numberStack.clear();
+        TextView stackNumber1 = (TextView) findViewById(R.id.stackNumber1);
+        TextView stackNumber2 = (TextView) findViewById(R.id.stackNumber2);
+        TextView stackNumber3 = (TextView) findViewById(R.id.stackNumber3);
+        TextView stackNumber4 = (TextView) findViewById(R.id.stackNumber4);
+        stackNumber1.setText("");
+        stackNumber2.setText("");
+        stackNumber3.setText("");
+        stackNumber4.setText("");
     }
 }
