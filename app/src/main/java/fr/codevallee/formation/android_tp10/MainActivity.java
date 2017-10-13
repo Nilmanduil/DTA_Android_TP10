@@ -1,5 +1,6 @@
 package fr.codevallee.formation.android_tp10;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -56,12 +57,31 @@ public class MainActivity extends AppCompatActivity {
         return inputNumberText.equals("") || inputNumberText.equals("0");
     }
 
+    private void beforeOperation() {
+        if(inputEmpty()) {
+            Integer last = numberStack.pop();
+            TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+            inputNumber.setText(last.toString());
+        }
+    }
+
     private void initializeOperatorButtons() {
         Button plusButton = (Button) findViewById(R.id.plusButton);
         plusButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                    beforeOperation();
+                    Integer last = numberStack.pop();
+                    TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+                    String inputNumberText = inputNumber.getText().toString();
 
+                    Integer result = last + Integer.parseInt(inputNumberText);
+                    numberStack.push(result);
+                    clearInputField();
+
+                    refreshNumberStack();
+                }
             }
         });
 
