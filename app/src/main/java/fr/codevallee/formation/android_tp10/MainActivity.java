@@ -38,14 +38,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void addDigitToInput(char digit) {
         TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
-        String inputNumberText = inputNumber.getText().toString();
 
-        if(inputNumberText.equals("") || inputNumberText.equals("0")) {
+        if(inputEmpty()) {
             inputNumber.setText("" + digit);
         }
         else {
+            String inputNumberText = inputNumber.getText().toString();
             inputNumber.setText(inputNumberText + digit);
         }
+    }
+
+    private boolean inputEmpty() {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        String inputNumberText = inputNumber.getText().toString();
+
+        return inputNumberText.equals("") || inputNumberText.equals("0");
     }
 
     private void initializeOperatorButtons() {
