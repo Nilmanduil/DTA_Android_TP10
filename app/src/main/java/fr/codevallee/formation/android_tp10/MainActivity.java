@@ -20,15 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Stack lines
-        TextView stackNumber1 = (TextView) findViewById(R.id.stackNumber1);
-        TextView stackNumber2 = (TextView) findViewById(R.id.stackNumber2);
-        TextView stackNumber3 = (TextView) findViewById(R.id.stackNumber3);
-        TextView stackNumber4 = (TextView) findViewById(R.id.stackNumber4);
-
-        // Input line
-        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
-
         // Functional buttons
         initializeFunctionalButtons();
 
