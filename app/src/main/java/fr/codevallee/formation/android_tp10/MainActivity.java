@@ -2,7 +2,6 @@ package fr.codevallee.formation.android_tp10;
 
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -11,9 +10,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Locale;
-import java.util.Stack;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends Tracer {
     private NumberStack numberStack = new NumberStack();
 
     @Override

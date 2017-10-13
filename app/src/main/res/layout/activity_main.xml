@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="fr.codevallee.formation.android_tp10.MainActivity">
+    tools:context="fr.codevallee.formation.android_tp10.MainActivity"
+    android:weightSum="100">
 
     <LinearLayout
         android:id="@+id/stackLine1"
@@ -14,7 +15,8 @@
         android:background="@color/colorNumberStack"
         android:padding="5dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:paddingRight="10dp"
+        android:layout_weight="">
 
         <TextView
             android:id="@+id/stackNumber4"
