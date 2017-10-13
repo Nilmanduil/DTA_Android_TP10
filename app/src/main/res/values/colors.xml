@@ -10,4 +10,5 @@
     <color name="colorOperatorButton">#69F</color>
     <color name="colorEnterButton">#F77</color>
     <color name="colorText">#000</color>
+    <color name="colorHelp">#CAF</color>
 </resources>

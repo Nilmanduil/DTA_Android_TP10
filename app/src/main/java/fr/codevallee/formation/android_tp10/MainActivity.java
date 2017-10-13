@@ -1,6 +1,7 @@
 package fr.codevallee.formation.android_tp10;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -8,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     private NumberStack numberStack = new NumberStack();
@@ -290,6 +293,27 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 clearInputField();
+            }
+        });
+
+        ImageButton helpButton = (ImageButton) findViewById(R.id.helpButton);
+        helpButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String language = Locale.getDefault().getDisplayLanguage();
+                String uri;
+                switch (language) {
+                    case "français":
+                        uri = "https://fr.wikipedia.org/wiki/Notation_polonaise_inverse";
+                        break;
+                    default:
+                        uri = "https://en.wikipedia.org/wiki/Reverse_Polish_notation";
+                        break;
+                }
+
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                Log.d("Info", uri);
+                startActivity(intent);
             }
         });
     }

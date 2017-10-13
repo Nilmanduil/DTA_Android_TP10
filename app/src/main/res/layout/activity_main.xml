@@ -294,8 +294,16 @@
                 android:background="@color/colorEnterButton"
                 android:text="@string/enterLabel" />
 
-            <android.support.v4.widget.Space
-                android:layout_weight="1"/>
+            <ImageButton
+                android:id="@+id/helpButton"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/colorHelp"
+                android:foreground="@android:drawable/ic_menu_help"
+                android:paddingHorizontal="30dp"
+                android:paddingVertical="10dp"
+                android:scaleType="centerInside" />
 
             <Button
                 android:id="@+id/divideButton"
