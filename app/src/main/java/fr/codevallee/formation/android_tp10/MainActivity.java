@@ -204,7 +204,8 @@ public class MainActivity extends AppCompatActivity {
         popButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                numberStack.pop();
+                refreshNumberStack();
             }
         });
 
