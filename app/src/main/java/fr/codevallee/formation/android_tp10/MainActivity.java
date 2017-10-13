@@ -127,7 +127,18 @@ public class MainActivity extends AppCompatActivity {
         divideButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if(numberStack.size() >= 2 || (!inputEmpty() && numberStack.size() >= 1)) {
+                    beforeOperation();
+                    Integer last = numberStack.pop();
+                    TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+                    String inputNumberText = inputNumber.getText().toString();
 
+                    Integer result = last / Integer.parseInt(inputNumberText);
+                    numberStack.push(result);
+                    clearInputField();
+
+                    refreshNumberStack();
+                }
             }
         });
     }
