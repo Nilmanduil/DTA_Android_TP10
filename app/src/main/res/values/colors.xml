@@ -7,7 +7,8 @@
     <color name="colorNumberStack">#FF9</color>
     <color name="colorInputField">#AAA</color>
     <color name="colorNumberButton">#EEE</color>
-    <color name="colorOperatorButton">#69F</color>
+    <color name="colorFunctionButton">#69F</color>
+    <color name="colorOperatorButton">#FB7</color>
     <color name="colorEnterButton">#F77</color>
     <color name="colorText">#000</color>
     <color name="colorHelp">#CAF</color>

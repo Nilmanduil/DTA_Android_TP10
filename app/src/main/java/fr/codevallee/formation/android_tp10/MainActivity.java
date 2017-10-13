@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Locale;
+import java.util.Stack;
 
 public class MainActivity extends AppCompatActivity {
     private NumberStack numberStack = new NumberStack();
@@ -338,5 +339,20 @@ public class MainActivity extends AppCompatActivity {
         stackNumber2.setText((last[1] == -1 ? "" : last[1].toString()));
         stackNumber3.setText((last[2] == -1 ? "" : last[2].toString()));
         stackNumber4.setText((last[3] == -1 ? "" : last[3].toString()));
+    }
+
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        inputNumber.setText(savedInstanceState.getString("input"));
+        numberStack = (NumberStack) savedInstanceState.getSerializable("numberStack");
+        super.onRestoreInstanceState(savedInstanceState);
+        refreshNumberStack();
+    }
+
+    protected void onSaveInstanceState(Bundle outState) {
+        TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
+        outState.putSerializable("numberStack", numberStack);
+        outState.putString("input", inputNumber.getText().toString());
+        super.onSaveInstanceState(outState);
     }
 }

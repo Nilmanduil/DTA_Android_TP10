@@ -2,6 +2,7 @@ package fr.codevallee.formation.android_tp10;
 
 import android.support.annotation.NonNull;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
@@ -12,7 +13,7 @@ import java.util.Stack;
  * Created by tgoudouneix on 13/10/2017.
  */
 
-public class NumberStack extends Stack<Integer> {
+public class NumberStack extends Stack<Integer> implements Serializable {
     public Integer[] getLastFour() {
         Integer number;
         Stack<Integer> stack = new Stack<Integer>();

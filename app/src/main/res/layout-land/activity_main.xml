@@ -4,118 +4,129 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:weightSum="100"
     tools:context="fr.codevallee.formation.android_tp10.MainActivity">
 
     <LinearLayout
-        android:id="@+id/stackLine1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorNumberStack"
-        android:padding="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="85">
 
-        <TextView
-            android:id="@+id/stackNumber4"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@android:drawable/ic_media_play"
-            android:text=""
-            android:textSize="25dp" />
+        <LinearLayout
+            android:id="@+id/stackLine1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorNumberStack"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/stackNumber4"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:text=""
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stackLine2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorNumberStack"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/stackNumber3"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:text=""
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stackLine3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorNumberStack"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/stackNumber2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:text=""
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/stackLine4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorNumberStack"
+            android:padding="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:id="@+id/stackNumber1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:text=""
+                android:textSize="25dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/inputLine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorInputField"
+            android:padding="20dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp">
+
+            <TextView
+                android:id="@+id/inputNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:drawableLeft="@android:drawable/ic_menu_edit"
+                android:drawablePadding="10dp"
+                android:lines="1"
+                android:maxLength="9"
+                android:maxLines="1"
+                android:text=""
+                android:textSize="50dp" />
+
+        </LinearLayout>
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/stackLine2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorNumberStack"
-        android:padding="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-        <TextView
-            android:id="@+id/stackNumber3"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@android:drawable/ic_media_play"
-            android:text=""
-            android:textSize="25dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/stackLine3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorNumberStack"
-        android:padding="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-        <TextView
-            android:id="@+id/stackNumber2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@android:drawable/ic_media_play"
-            android:text=""
-            android:textSize="25dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/stackLine4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorNumberStack"
-        android:padding="5dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-
-        <TextView
-            android:id="@+id/stackNumber1"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@android:drawable/ic_media_play"
-            android:text=""
-            android:textSize="25dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/inputLine"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorInputField"
-        android:padding="20dp"
-        android:paddingLeft="40dp"
-        android:paddingRight="40dp">
-
-        <TextView
-            android:id="@+id/inputNumber"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:drawableLeft="@android:drawable/ic_menu_edit"
-            android:drawablePadding="10dp"
-            android:lines="1"
-            android:maxLength="9"
-            android:maxLines="1"
-            android:text=""
-            android:textSize="50dp" />
-
-    </LinearLayout>
 
     <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="15">
 
         <TableRow
             android:id="@+id/keyboardLine1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <Button
                 android:id="@+id/clearButton"
@@ -149,14 +160,6 @@
                 android:background="@color/colorNumberButton"
                 android:text="3" />
 
-            <Button
-                android:id="@+id/plusButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorOperatorButton"
-                android:text="+" />
-
         </TableRow>
 
         <TableRow
@@ -164,7 +167,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <Button
                 android:id="@+id/popButton"
@@ -198,14 +201,6 @@
                 android:background="@color/colorNumberButton"
                 android:text="6" />
 
-            <Button
-                android:id="@+id/minusButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorOperatorButton"
-                android:text="-" />
-
         </TableRow>
 
         <TableRow
@@ -213,7 +208,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="5">
+            android:weightSum="4">
 
             <Button
                 android:id="@+id/swapButton"
@@ -247,14 +242,6 @@
                 android:background="@color/colorNumberButton"
                 android:text="9" />
 
-            <Button
-                android:id="@+id/timesButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@color/colorOperatorButton"
-                android:text="X" />
-
         </TableRow>
 
         <TableRow
@@ -262,7 +249,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="horizontal"
-            android:weightSum="5"
+            android:weightSum="4"
             >
 
             <ImageButton
@@ -305,16 +292,46 @@
                 android:paddingVertical="10dp"
                 android:scaleType="centerInside" />
 
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/keyboardLine5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/plusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorOperatorButton"
+                android:text="+" />
+
+            <Button
+                android:id="@+id/minusButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorOperatorButton"
+                android:text="-" />
+
+            <Button
+                android:id="@+id/timesButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/colorOperatorButton"
+                android:text="X" />
+
             <Button
                 android:id="@+id/divideButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:layout_column="4"
-
                 android:background="@color/colorOperatorButton"
                 android:text="÷" />
-
         </TableRow>
 
     </TableLayout>
