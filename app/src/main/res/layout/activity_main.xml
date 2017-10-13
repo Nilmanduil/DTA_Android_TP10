@@ -17,11 +17,11 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/stackNumber1"
+            android:id="@+id/stackNumber4"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@android:drawable/ic_media_play"
-            android:text="Test nombre pile 1"
+            android:text=""
             android:textSize="25dp" />
 
     </LinearLayout>
@@ -36,11 +36,11 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/stackNumber2"
+            android:id="@+id/stackNumber3"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@android:drawable/ic_media_play"
-            android:text="Test nombre pile 2"
+            android:text=""
             android:textSize="25dp" />
 
     </LinearLayout>
@@ -55,11 +55,11 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/stackNumber3"
+            android:id="@+id/stackNumber2"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@android:drawable/ic_media_play"
-            android:text="Test nombre pile 3"
+            android:text=""
             android:textSize="25dp" />
 
     </LinearLayout>
@@ -74,11 +74,11 @@
         android:paddingRight="10dp">
 
         <TextView
-            android:id="@+id/stackNumber4"
+            android:id="@+id/stackNumber1"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:drawableLeft="@android:drawable/ic_media_play"
-            android:text="Test nombre pile 4"
+            android:text=""
             android:textSize="25dp" />
 
     </LinearLayout>
