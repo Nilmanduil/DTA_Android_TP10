@@ -13,7 +13,7 @@ import java.util.Stack;
  * Created by tgoudouneix on 13/10/2017.
  */
 
-public class NumberStack extends Stack<Integer> implements Serializable {
+public class NumberStack extends Stack<Integer> {
     public Integer[] getLastFour() {
         Integer number;
         Stack<Integer> stack = new Stack<Integer>();
