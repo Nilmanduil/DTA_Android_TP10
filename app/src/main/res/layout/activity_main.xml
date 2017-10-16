@@ -15,8 +15,7 @@
         android:background="@color/colorNumberStack"
         android:padding="5dp"
         android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_weight="">
+        android:paddingRight="10dp">
 
         <TextView
             android:id="@+id/stackNumber4"

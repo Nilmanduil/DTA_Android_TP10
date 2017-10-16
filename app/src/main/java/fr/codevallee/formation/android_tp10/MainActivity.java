@@ -59,7 +59,7 @@ public class MainActivity extends Tracer {
     }
 
     private void beforeOperation() {
-        if(inputEmpty()) {
+        if(inputReallyEmpty()) {
             Integer last = numberStack.pop();
             TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
             inputNumber.setText(last.toString());
@@ -129,10 +129,19 @@ public class MainActivity extends Tracer {
             @Override
             public void onClick(View v) {
                 if(numberStack.size() >= 2 || (!inputReallyEmpty() && numberStack.size() >= 1)) {
-                    beforeOperation();
-                    Integer last = numberStack.pop();
                     TextView inputNumber = (TextView) findViewById(R.id.inputNumber);
                     String inputNumberText = inputNumber.getText().toString();
+                    if (inputNumberText.equals("0") || numberStack.peek() == 0) {
+                        return;
+                    }
+
+                    beforeOperation();
+                    Integer last = numberStack.pop();
+                    inputNumberText = inputNumber.getText().toString();
+
+                    if(inputNumberText.equals("0")) {
+                        return;
+                    }
 
                     Integer result = last / Integer.parseInt(inputNumberText);
                     numberStack.push(result);
