@@ -139,10 +139,6 @@ public class MainActivity extends Tracer {
                     Integer last = numberStack.pop();
                     inputNumberText = inputNumber.getText().toString();
 
-                    if(inputNumberText.equals("0")) {
-                        return;
-                    }
-
                     Integer result = last / Integer.parseInt(inputNumberText);
                     numberStack.push(result);
                     clearInputField();
